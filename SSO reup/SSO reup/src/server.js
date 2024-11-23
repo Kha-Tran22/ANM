@@ -28,6 +28,7 @@ app.use(cookieParser());
 //test connection db
 // connection();
 
+configPassport();
 
 //init web routes
 initWebRoutes(app);
@@ -39,7 +40,6 @@ app.use((req, res) => {
     return res.send('404 not found')
 })
 
-configPassport();
 
 app.listen(PORT, () => {
     console.log(">>> JWT Backend is running on the port = " + PORT);
