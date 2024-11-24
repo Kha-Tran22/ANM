@@ -112,7 +112,7 @@ const handleUserLogin = async (rawData) => {
                         username: user.username
                     }
                 }
-            }else {
+            } else {
                 return {
                     EM: 'Your password is incorrect!',
                     EC: 1,
