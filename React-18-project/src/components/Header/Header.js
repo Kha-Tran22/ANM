@@ -10,6 +10,7 @@ const Header = () => {
     const navigate = useNavigate();
     const handleLogin = () => {
         // redicrect to SSO
+        //http://localhost:8080/login?serviceURL=http://localhost:3000/
         window.location.href = `${process.env.REACT_APP_BACKEND_SSO}?serviceURL=${process.env.REACT_APP_SERVICE_URL}`;
     }
 
