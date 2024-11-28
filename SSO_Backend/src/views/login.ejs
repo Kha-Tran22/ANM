@@ -47,7 +47,7 @@
 					url: `${window.location.origin}/login`,
 					data: {username, password, serviceURL},
 					withCredentials: true,
-					crossDomain: true,
+					//crossDomain: true,
 					success: function (data) {
 						$("#flashMsg").addClass("none-flash");
 						const redirectURL = `${data.redirectURL}/code?ssoToken=${data.code}`;

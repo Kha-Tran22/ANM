@@ -20,7 +20,7 @@ app.use(flash());
 
 //config cors
 configCors(app);
-connectDB();
+//connectDB();
 
 //config view engine
 configViewEngine(app);

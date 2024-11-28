@@ -25,7 +25,7 @@ passport.use(new LocalStrategy({
 const handleLogout = (req, res, next) => {
     req.session.destroy(function (err) {
         req.logout();
-        res.redirect('/login');
+        res.redirect('');
       });
 }
 

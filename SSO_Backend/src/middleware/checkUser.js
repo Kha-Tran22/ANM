@@ -2,14 +2,14 @@
 const isLogin = (req, res, next) => {
     if(req.isAuthenticated()) {
         if(req.path === '/login') {
-             res.redirect('/');
+            return res.redirect('/');
         }
          next();
     } else {
         if(req.path === '/login') {
          next();
         } else 
-         res.redirect('/login');
+            return res.redirect('/login');
     }
 }
 

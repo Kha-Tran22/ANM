@@ -2,8 +2,8 @@ import { INCREMENT, DECREMENT } from '../action/counterAction';
 
 
 const INITIAL_STATE = {
-
     count: 0,
+    name: 'Kha'
 };
 
 const countReducer = (state = INITIAL_STATE, action) => {
