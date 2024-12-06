@@ -14,6 +14,8 @@ import About from './components/About/About';
 import { Provider } from 'react-redux';
 import store from './redux/store';
 import Code from './components/Code/Code';
+import Home from './components/Home/Home';
+import PrivateRoute from './routes/PrivateRoute';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -24,8 +26,10 @@ root.render(
         <Routes>
           <Route path="/" element={<AppRoute />}>
             <Route path="about" element={<About />} />
+            <Route path="home" element={<Home />} />
           </Route>
           <Route path="code" element={<Code />} />
+          <Route path="/" element={<PrivateRoute />} />
         </Routes>
       </BrowserRouter>,
     </React.StrictMode>

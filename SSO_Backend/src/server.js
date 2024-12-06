@@ -14,6 +14,7 @@ import flash from 'connect-flash';
 
 const app = express();
 const PORT = process.env.PORT || 8080;
+app.use(express.static('public'));
 
 //cònig flash mess
 app.use(flash());
@@ -41,6 +42,11 @@ configPassport();
 initWebRoutes(app);
 initApiRoutes(app);
 
+// Route cho trang signup
+app.get('/signup', (req, res) => {
+    const redirectURL = req.query.serviceURL || '/'; // Lấy tham số query serviceURL hoặc mặc định là '/'
+    res.render('signup', { redirectURL }); // Render file signup.ejs với redirectURL
+});
 
 //req => middleware => res
 app.use((req, res) => {

@@ -41,7 +41,7 @@ const accountReducer = (state = INITIAL_STATE, action) => {
             return {
                 ...state,
                userInfo: action.user,
-               isLoading: false,
+               isLoading: true,
                errMessage: ''
             }
 

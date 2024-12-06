@@ -1,7 +1,6 @@
-
 .topnav {
     overflow: hidden;
-    background-color: #333;
+    background-color: white;
 
     a {
         float: left;
@@ -13,7 +12,7 @@
       }
     a:hover {
     background-color: #ddd;
-    color: black;
+    color: white;
     }
 
     a.active {
@@ -22,3 +21,141 @@
       }
 
   }
+
+/* Dropdown wrapper container */
+.dropdown-wrapper {
+  display: flex;
+  align-items: center; /* Căn chỉnh theo chiều dọc */
+  background-color: white; /* Nền trắng khi không hover */
+  border: 1px solid rgba(2,72,121,1); /* Viền màu xanh đen */
+  border-radius: 20px; /* Bo góc cho cả container */
+  padding: 5px 15px; /* Padding xung quanh các phần tử */
+  transition: all 0.3s ease; /* Thêm hiệu ứng chuyển đổi khi hover */
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  font-weight: 500;
+  height: 45px;
+  width: 200px;
+  justify-content: flex-start; /* Chia khoảng cách giữa chữ và dấu dropdown */
+  position: relative;
+}
+
+/* Hiệu ứng hover trên wrapper */
+.dropdown-wrapper:hover {
+  background-color: rgba(2,72,121,1); /* Nền xanh đen khi hover */
+  color: white; /* Màu chữ trắng khi hover */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Bóng đổ cho toàn bộ wrapper */
+  border: 1px solid rgba(255,255,255,1);
+}
+
+/* Cấu hình cho dropdown toggle */
+.dropdown-wrapper .dropdown-toggle {
+  display: flex;
+  align-items: center; /* Căn giữa chữ và icon theo chiều dọc */
+  justify-content: flex-start; /* Căn chữ sang trái */
+  font-size: 16px;
+  font-weight: 500;
+  overflow: hidden;
+  text-overflow: fade;
+  white-space: nowrap;
+  flex-grow: 1; /* Đảm bảo tên có thể mở rộng */
+  max-width: 130px; /* Giới hạn chiều rộng tên */
+  padding-right: 20px; /* Khoảng cách giữa tên và icon */
+}
+
+/* Cấu hình màu chữ trong dropdown khi hover */
+.dropdown-wrapper:hover .dropdown-toggle {
+  color: white; /* Đổi màu chữ thành trắng khi hover vào dropdown */
+}
+
+/* Hover trên mục của dropdown */
+.dropdown-wrapper .dropdown-menu .dropdown-item:hover {
+  background-color: #f1f1f1;
+  color: rgba(2,72,121,1); /* Màu chữ khi hover trên các mục */
+}
+
+/* Style cho phần tử dropdown */
+.navbar .dropdown-toggle {
+  background-color: transparent; /* Nền trong suốt */
+  color: rgba(2,72,121,1); /* Màu chữ khi không hover */
+  border: none; /* Loại bỏ viền mặc định */
+  font-weight: 500; /* Độ đậm chữ mặc định */
+  height: 45px; /* Đảm bảo dropdown chiếm toàn bộ chiều cao của wrapper */
+  display: flex;
+  transition: all 0.3s ease; /* Thêm hiệu ứng chuyển đổi khi hover */
+  align-items: center; /* Căn chỉnh chữ theo chiều dọc */
+  justify-content: space-between; /* Chia khoảng cách giữa chữ và dấu dropdown */
+  padding-right: 10px; /* Tạo khoảng cách giữa chữ và dấu dropdown */
+}
+
+/* Cấu hình cho icon */
+.navbar .dropdown-toggle::after {
+  margin-left: 10px; /* Khoảng cách giữa chữ và icon */
+  font-size: 20px; /* Kích thước icon */
+  position: absolute;
+  right: -20px; /* Căn phải icon */
+  top: 50%;
+  transform: translateY(-50%); /* Căn giữa icon theo chiều dọc */
+}
+
+/* Style cho các mục trong dropdown */
+.dropdown-wrapper .dropdown-menu {
+  right: 0 !important; /* Căn phải dropdown */
+  left: auto !important; /* Vô hiệu hóa căn trái */
+  width: 150px; /* Chiều rộng của dropdown */
+  max-height: 300px; /* Chiều cao tối đa của dropdown */
+  text-align: left; /* Căn chữ về bên trái */
+  border-radius: 8px; /* Bo góc */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ */
+  transition: all 0.3s ease; 
+  padding: 10px 0; /* Khoảng cách trên dưới */
+  font-size: 14px; /* Cỡ chữ */
+  background-color: #ffffff; /* Màu nền */
+  border: 1px solid #e0e0e0; /* Đường viền nhạt */
+}
+
+/* Style cho các item trong dropdown */
+.dropdown-wrapper .dropdown-menu .dropdown-item {
+  display: flex; /* Sử dụng flexbox để căn giữa */
+  justify-content: center; /* Căn giữa theo chiều ngang */
+  align-items: center; /* Căn giữa theo chiều dọc */
+  padding: 8px 12px; /* Tăng khoảng cách padding cho từng item */
+  color: #333; /* Màu chữ */
+  transition: background-color 0.2s ease, color 0.2s ease; /* Hiệu ứng hover mượt */
+  font-size: 16px; /* Cỡ chữ */
+  font-family: 'Poppins', sans-serif; /* Font Poppins */
+}
+
+/* Màu nền và chữ khi hover trên các mục trong dropdown */
+.dropdown-wrapper .dropdown-menu .dropdown-item:hover {
+  background-color: #f1f1f1; /* Màu nền khi hover */
+  font-weight: 500;
+  color: rgba(2,72,121,1); /* Màu chữ xanh đậm khi hover */
+}
+
+/* Hiệu ứng cho mũi tên trong dropdown */
+.dropdown-toggle::after {
+  margin-left: 10px; /* Cách xa mũi tên khỏi chữ */
+  font-size: 12px; /* Chỉnh kích thước mũi tên */
+}
+
+/* Tùy chỉnh các mục dropdown khi hover */
+.dropdown-item:hover {
+  background-color: #333; /* Màu nền khi hover */
+  font-weight: 500;
+  color: rgba(2,72,121,1); /* Màu chữ khi hover */
+}
+
+/* Style cho thẻ wrapper chứa dropdown và chữ */
+.navbar-nav .nav-link {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  padding: 10px 15px; /* Điều chỉnh padding */
+}
+
+.logo {
+    width: 50px;  /* Điều chỉnh chiều rộng */
+    height: auto;  /* Giữ tỷ lệ hình ảnh */
+    display: block;  /* Đảm bảo hình ảnh được hiển thị như một block */
+    margin: 0 auto;  /* Căn giữa hình ảnh */
+    margin-right: 10px;
+}

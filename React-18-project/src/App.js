@@ -1,12 +1,14 @@
 
 import { useEffect } from 'react';
 import About from './components/About/About';
-import Header from './components/Header/Header'
+import Header from './components/Header/Header';
+import Home from './components/Home/Home';
 import { useDispatch, useSelector } from 'react-redux';
 import { doGetAccount } from './redux/action/accountAction';
 import RingLoader from "react-spinners/RingLoader";
 import {css} from "@emotion/react";
-
+import { BrowserRouter as Router, Route, Switch, Routes } from 'react-router-dom';
+import PrivateRoute from './routes/PrivateRoute';
 
 
 const App = () => {
@@ -29,7 +31,7 @@ const App = () => {
 
   const style = { position: "fixed", top: "50%", left: "50%", transform: "translate(-50%, -50%)" };
   return (
-    <>
+    <Router>
       {isLoading === true ? 
         <div style={style}>
           <RingLoader
@@ -41,11 +43,16 @@ const App = () => {
         </div>
         :
         <div className="App">
-          <Header> </Header>
+          <Header>
+            <Routes>
+              <Route path='/about' element={<About />} />
+              <Route path='/home' element={<PrivateRoute element={<Home />} />} />
+            </Routes>
+          </Header>
           
         </div>
       }
-    </>
+    </Router>
   );
 }
 

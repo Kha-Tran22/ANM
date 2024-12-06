@@ -38,7 +38,7 @@ const Code = (props) => {
                 <div className="col-12 mt-3">
                     {message}
                     {message && <span>. Please do login again. Click here to login to &nbsp;
-                        <a href={`${process.env.REACT_APP_BACKEND_SSO}?serviceURL=${process.env.REACT_APP_SERVICE_URL}`}>Login </a></span>} 
+                        <a href={`${process.env.REACT_APP_BACKEND_SSO_LOGIN}?serviceURL=${process.env.REACT_APP_SERVICE_URL}`}>Login </a></span>} 
                 </div>
             </div>
         </div>
