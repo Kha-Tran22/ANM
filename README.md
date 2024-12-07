@@ -1,3 +1,7 @@
+[![Static Badge](https://img.shields.io/badge/v14.7.0-node?style=flat&logo=nodedotjs&logoColor=green&label=Node.js&color=green&cacheSeconds=360)](https://nodejs.org/en/blog/release/v14.7.0) [![Static Badge](https://img.shields.io/badge/v6.14.7-npm?style=flat&logoColor=green&label=npm&color=blue&cacheSeconds=360)](https://www.npmjs.com/package/npm/v/6.14.7) [![Static Badge](https://img.shields.io/badge/MySQL%20Community%20Server-mysql?style=flat&logo=mysql&logoColor=%230492C2&label=MySQL&color=%230492C2)](https://dev.mysql.com/downloads/)
+
+
+
 <p align="center">
   <a href="https://github.com/Kha-Tran22/ANM"><img src="https://github.com/thaikhangvip123/Images-for-CO3069/blob/main/title.png" alt="HCMUT" width="700" /></a>
 </p>
@@ -59,7 +63,7 @@ In `SSO_Backend`, open the `.env` file and `config.json` file (located in the `c
 
 Make the necessary changes. In the `config.json` file, only modify the **development** section.
 
-### 4. Run the Application
+## Run the Application
 Open a terminal and run the `npm start` command in both folders:
 
 <img src="https://github.com/thaikhangvip123/Images-for-CO3069/blob/main/sso_db6.png" width="500" />
@@ -72,3 +76,22 @@ If the page loads correctly, the MySQL connection is successful. Otherwise, revi
 **Note**: If the `npm start` command fails, delete the `node_modules` folder and the `package-lock.json` file. Then use the `npm install` command to reinstall the dependencies.
 
 <img src="https://github.com/thaikhangvip123/Images-for-CO3069/blob/main/sso_db8.png" width="500" />
+
+## How to use Application
+This project is running on localhost, access the URL [http://localhost:8080/signup](http://localhost:8080/signup) to `sign up` account.
+<img src="https://github.com/thaikhangvip123/Images-for-CO3069/blob/main/signup.png" width="500" />
+
+Then, access [http://localhost:8080/login](http://localhost:8080/login) to login.
+
+<img src="https://github.com/thaikhangvip123/Images-for-CO3069/blob/main/login.png" width="500" />
+
+After success, you will move to `application page`.
+
+<img src="https://github.com/thaikhangvip123/Images-for-CO3069/blob/main/application.png" width="500" />
+
+## Credits
+This project was completed by
+- Trương Nguyễn Hoàng Anh - 2210147
+- Trần Tuấn Kha - 2211418
+- Nguyễn Trường Thái Khang - 2211458
+- Lâm Hoàng Tân - 2213054
