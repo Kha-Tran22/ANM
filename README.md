@@ -1,4 +1,4 @@
-# HƯỚNG DẫN Sử DỤNG HỆ THỐNG SSO
+# <img src="https://upload.wikimedia.org/wikipedia/commons/f/f0/HCMCUT.svg" alt="HCMUT" width="25" /> Hướng dẫn sử dụng hệ thống SSO
 
 ## 1. Cài đặt và thiết lập các phần mềm cần thiết
 Trước khi chạy được dự án này, cài đặt **Node.js** và **MySQL WorkBench** (nếu chưa tải). Lưu ý đảm bảo tương thích giữa các phiên bản cần cài **Node.js v14.7.0**.
