@@ -1,13 +1,8 @@
 [![Static Badge](https://img.shields.io/badge/v14.7.0-node?style=flat&logo=nodedotjs&logoColor=green&label=Node.js&color=green&cacheSeconds=360)](https://nodejs.org/en/blog/release/v14.7.0) [![Static Badge](https://img.shields.io/badge/v6.14.7-npm?style=flat&logoColor=green&label=npm&color=blue&cacheSeconds=360)](https://www.npmjs.com/package/npm/v/6.14.7) [![Static Badge](https://img.shields.io/badge/MySQL%20Community%20Server-mysql?style=flat&logo=mysql&logoColor=%230492C2&label=MySQL&color=%230492C2)](https://dev.mysql.com/downloads/)
 
-
-
-<p align="center">
-  <a href="https://github.com/Kha-Tran22/ANM"><img src="https://github.com/thaikhangvip123/Images-for-CO3069/blob/main/title.png" alt="HCMUT" width="700" /></a>
-</p>
-
-#
-
+<h1 align="center">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/f/f0/HCMCUT.svg" alt="HCMUT" width="35" /> SSO-System & Application on Website
+</h1>
 **Single Sign-On (SSO)** is an authentication mechanism that allows users to access multiple applications or services with a single login. With SSO, users don't need to remember and input different login credentials for each system. Instead, they use a single set of credentials. In this project, we will implement the `OpenID Connect` authentication method.
 
 # Table of Contents
