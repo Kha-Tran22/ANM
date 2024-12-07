@@ -6,7 +6,7 @@
 
 **Single Sign-On (SSO)** is an authentication mechanism that allows users to access multiple applications or services with a single login. With SSO, users don't need to remember and input different login credentials for each system. Instead, they use a single set of credentials. In this project, we will implement the `OpenID Connect` authentication method.
 
-# Table of Contents
+## Table of Contents
 - [Setup Visual Studio Code Environment](#setup-vs-code-environment)
 - [Install Node.js](#install-nodejs)
 - [Install MySQL Workbench](#install-mysql-workbench)
@@ -91,3 +91,6 @@ This project was completed by
 - Trần Tuấn Kha - 2211418
 - Nguyễn Trường Thái Khang - 2211458
 - Lâm Hoàng Tân - 2213054
+
+## Languages
+<img src="https://thienanblog.com/wp-content/uploads/2015/04/javascript_logo.png" alt="Javascript" width="50" /> &ensp; <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" alt="HTML" width="50" /> &ensp; <img src="https://upload.wikimedia.org/wikipedia/commons/9/92/LaTeX_logo.svg" alt="LaTeX" width="110" />
