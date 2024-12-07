@@ -1,74 +1,74 @@
-
 <p align="center">
   <a href="https://github.com/Kha-Tran22/ANM"><img src="https://github.com/thaikhangvip123/Images-for-CO3069/blob/main/title.png" alt="HCMUT" width="700" /></a>
 </p>
 
 #
 
-Single Sign-On (SSO) là một cơ chế xác thực cho phép người dùng truy cập nhiều ứng dụng hoặc dịch vụ bằng cách đăng nhập một lần duy nhất. Với SSO, người dùng không cần phải nhớ và nhập nhiều thông tin đăng nhập khác nhau cho từng hệ thống. Thay vào đó, họ chỉ cần sử dụng một bộ thông tin xác thực duy nhất. Ở trong bài này, chúng ta sẽ hiện thực phương thức xác thực `OpenID Connect`.
+**Single Sign-On (SSO)** is an authentication mechanism that allows users to access multiple applications or services with a single login. With SSO, users don't need to remember and input different login credentials for each system. Instead, they use a single set of credentials. In this project, we will implement the `OpenID Connect` authentication method.
 
-# Mục lục
-- [Cài đặt môi trường Visual Studio Code](#cài-đặt-môi-trường-Visual-Studio-Code)
-- [Install Node.js](#install-Nodejs)
-- [Cài đặt MySQL WorkBench](#)
-- [Hướng dẫn kết nối với MySQL]
+# Table of Contents
+- [Setup Visual Studio Code Environment](#setup-vs-code-environment)
+- [Install Node.js](#install-nodejs)
+- [Install MySQL Workbench](#install-mysql-workbench)
+- [Guide to Connecting to MySQL](#guide-to-connecting-to-mysql)
 
+## Setup Visual Studio Code Environment <a id="setup-vs-code-environment"></a>
+Visit the [Visual Studio Code website](https://code.visualstudio.com/) to download and install the editor.
 
+## Install Node.js <a id="install-nodejs"></a>
+Visit the [Node.js website](https://nodejs.org/en/) to download and install the required version.
 
+## Install MySQL Workbench <a id="install-mysql-workbench"></a>
+Visit the [MySQL Community Server](https://dev.mysql.com/downloads/windows/installer/8.0.html) page to download and install MySQL Workbench.
 
+## Guide to Connecting to MySQL <a id="guide-to-connecting-to-mysql"></a>
 
+### 1. Create the MySQL Database
+#### Import data from the `database.sql` file
 
-## Cài đặt môi trường Visual Studio Code <a id="Install VSCode"></a>
-Truy cập trang web [Visual Studio Code](https://code.visualstudio.com/) để cài đặt.
-## Install Node.js
-Truy cập trang web [Node.js](https://taimienphi.vn/download-node-js-39030/-1470-phien-ban) để cài đặt.
-## Cài đặt MySQL WorkBench
-Truy cập trang web [MySQL Community Server](https://dev.mysql.com/downloads/windows/installer/8.0.html) để cài đặt.
-## Hướng dẫn kết nối với MySQL
+**Step 1**: Create a new schema and name it `sso_user`.  
+(*Note: If you use a different name, you must adjust the code in the `SSO_Backend` folder accordingly.*)
 
-### 1. Tạo cơ sở dữ liệu MySQL
-#### Nhập dữ liệu từ file `database.sql`
-
-**Bước 1**: Tạo một schema mới và đặt tên là `sso_user`. (Lưu ý: nếu đặt tên khác, phải điều chỉnh code trong folder `SSO_Backend` để tương ứng.)
-
-**Bước 2**: Nhập dữ liệu từ file SQL.
-- Vào **Server** -> **Data Import**.
-- Chọn ô **Import from Self-Contained File**.
-- Chọn đường dẫn đến file `database.sql` được đính kèm trong folder `src`.
-- Trong mục **Default Target Schema**, chọn `sso_user`.
+**Step 2**: Import data from the SQL file.
+- Navigate to **Server** -> **Data Import**.
+- Select **Import from Self-Contained File**.
+- Choose the path to the `database.sql` file located in the `src` folder.
+- In **Default Target Schema**, select `sso_user`.
 <img src="https://github.com/thaikhangvip123/Images-for-CO3069/blob/main/sso_db1.png" width="500" />
 
-**Bước 3**: Nhấn nút **Start Import**.
+**Step 3**: Click the **Start Import** button.
 
-Sau khi refresh lại schema, nếu hiện đúng cấu trúc như trong file thì bạn đã import thành công.
+Once the schema is refreshed, if the structure matches the provided file, the import was successful.
 
 <img src="https://github.com/thaikhangvip123/Images-for-CO3069/blob/main/sso_db2.png" width="200" />
 
-### 2. Mở source code
-Mở hai folder chương trình `SSO_Frontend` và `SSO_Backend` trong hai cửa sổ riêng biệt.
+### 2. Open the Source Code
+Open the `SSO_Frontend` and `SSO_Backend` program folders in two separate windows.
 <img src="https://github.com/thaikhangvip123/Images-for-CO3069/blob/main/sso_db3.png" width="500" />
-### 3. Điều chỉnh để kết nối Database
-Trước tiên, kiểm tra trong folder `SSO_Backend` để đảm bảo các thông tin đã đúng để kết nối với MySQL.
-Trong `SSO_Backend` mở 2 file `.env` và `config.json` (trong folder `config`) như trong ảnh và điều chỉnh một số thông tin phù hợp với máy tính.
+
+### 3. Configure the Database Connection
+First, verify the connection details in the `SSO_Backend` folder to ensure they are correct for connecting to MySQL.  
+In `SSO_Backend`, open the `.env` file and `config.json` file (located in the `config` folder) and adjust the information as necessary.
 
 <img src="https://github.com/thaikhangvip123/Images-for-CO3069/blob/main/sso_db4.png" width="500" />
-- Kiểm tra và điều chỉnh thông tin như sau:
-  - `DB_USERNAME`: Tên tài khoản trong MySQL (vd: `root`).
+- Check and update the following details:
+  - `DB_USERNAME`: MySQL account username (e.g., `root`).
 <img src="https://github.com/thaikhangvip123/Images-for-CO3069/blob/main/sso_db5.png" width="500" />
-  - `DB_PASSWORD`: Mật khẩu MySQL (vd: `123456`).
-  - `DB_NAME`: Tên schema đã tạo trong MySQL (mặc định là `sso_user`).
+  - `DB_PASSWORD`: MySQL password (e.g., `123456`).
+  - `DB_NAME`: The schema name created in MySQL (default: `sso_user`).  
 
-Điều chỉnh thông tin cho phù hợp. Trong file `config.json`, chỉ cần thay đổi trong phần **development**.
+Make the necessary changes. In the `config.json` file, only modify the **development** section.
 
-### 4. Khởi chạy chương trình
-Mở Terminal, nhập lệnh `npm start` trong cả hai folder:
+### 4. Run the Application
+Open a terminal and run the `npm start` command in both folders:
 
 <img src="https://github.com/thaikhangvip123/Images-for-CO3069/blob/main/sso_db6.png" width="500" />
 <img src="https://github.com/thaikhangvip123/Images-for-CO3069/blob/main/sso_db7.png" width="500" />
-`SSO_Frontend`: Sau khi chạy, trình duyệt sẽ tự động mở đường dẫn [http://localhost:3000/](http://localhost:3000/).
-Truy cập đường dẫn [http://localhost:8080/user](http://localhost:8080/user) để kiểm tra kết nối với MySQL. Nếu trang hiện đúng, kết nối MySQL đã thành công. Nếu bị lỗi, vui lòng kiểm tra lại các bước đã thực hiện.
 
-Chú ý: Nếu như lệnh `npm start` không chạy được, xóa folder `node_modules` và file `package-lock.json`. Sau đó sử dụng lệnh `npm install` để tải lại tài nguyên.
+- **SSO_Frontend**: After running, the browser will automatically open at the URL [http://localhost:3000/](http://localhost:3000/).
+- Access the URL [http://localhost:8080/user](http://localhost:8080/user) to verify the MySQL connection.  
+If the page loads correctly, the MySQL connection is successful. Otherwise, review the steps to troubleshoot any issues.
+
+**Note**: If the `npm start` command fails, delete the `node_modules` folder and the `package-lock.json` file. Then use the `npm install` command to reinstall the dependencies.
 
 <img src="https://github.com/thaikhangvip123/Images-for-CO3069/blob/main/sso_db8.png" width="500" />
-
