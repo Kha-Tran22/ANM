@@ -8,7 +8,7 @@
 Single Sign-On (SSO) là một cơ chế xác thực cho phép người dùng truy cập nhiều ứng dụng hoặc dịch vụ bằng cách đăng nhập một lần duy nhất. Với SSO, người dùng không cần phải nhớ và nhập nhiều thông tin đăng nhập khác nhau cho từng hệ thống. Thay vào đó, họ chỉ cần sử dụng một bộ thông tin xác thực duy nhất. Ở trong bài này, chúng ta sẽ hiện thực phương thức xác thực `OpenID Connect`.
 
 # Mục lục
-- [Cài đặt môi trường Visual Studio Code](#Cài-đặt-môi-trường-Visual-Studio-Code)
+- [Cài đặt môi trường Visual Studio Code](#cài-đặt-môi-trường-Visual-Studio-Code)
 - [Install Node.js](#install-Nodejs)
 - [Cài đặt MySQL WorkBench](#)
 - [Hướng dẫn kết nối với MySQL]
