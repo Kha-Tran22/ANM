@@ -47,8 +47,21 @@ const initWebRoutes = (app) => {
 
     router.post("/logout", passController.handleLogout);
 
-    router.post('/verify-token', loginController.verifySSOToken)
+    router.post('/verify-token', loginController.verifySSOToken);
 
+    router.get('/change-password', loginController.getResetPassword);
+
+    router.post('/send-otp', loginController.sendOTP);
+    router.post('/change-password', loginController.changePassword);
+
+    router.post('/home', loginController.goHome);
+
+    router.post('/introduction', loginController.goIntroduction);
+
+    router.post('/source', loginController.goSource);
+
+    // router.get("/signup", loginController.getSignupPage);
+    
     return app.use("/", router);
 }
 

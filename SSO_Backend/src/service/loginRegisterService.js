@@ -115,7 +115,7 @@ const handleUserLogin = async (rawData) => {
                 }
             } else {
                 return {
-                    EM: 'Your password is incorrect!',
+                    EM: 'Your email or password is incorrect!',
                     EC: 1,
                     DT: ''
                 }
@@ -125,7 +125,7 @@ const handleUserLogin = async (rawData) => {
 
         return {
             // EM: 'Your email/phone number or password is incorrect!',
-            EM: 'Your email/phone number is incorrect!',
+            EM: 'Your email or password is incorrect!',
             EC: 1,
             DT: ''
         }

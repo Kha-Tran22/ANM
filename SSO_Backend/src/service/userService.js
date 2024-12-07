@@ -122,6 +122,25 @@ const updateUserInfor = async (email, username, id) => {
     // }
 }
 
+const updateUserPassword = async (email, newPassword) => {
+    try {
+        const user = await UserModel.findOne({ email }); // Tìm user theo email
+
+        if (!user) {
+            return { success: false, message: "User not found." };
+        }
+
+        const hashedPassword = await bcrypt.hash(newPassword, 10); // Hash mật khẩu
+        user.password = hashedPassword;
+        await user.save(); // Lưu thay đổi
+
+        return { success: true };
+    } catch (error) {
+        console.error("Error updating password:", error);
+        return { success: false, message: "Failed to update password." };
+    }
+};
+
 module.exports = {
-    createNewUser, getUserList, deleteUser, getUserById, updateUserInfor
+    createNewUser, getUserList, deleteUser, getUserById, updateUserInfor, updateUserPassword
 }
