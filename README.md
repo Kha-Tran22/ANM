@@ -3,6 +3,7 @@
 <h1 align="center">
   <img src="https://upload.wikimedia.org/wikipedia/commons/f/f0/HCMCUT.svg" alt="HCMUT" width="35" /> SSO-System & Application on Website
 </h1>
+
 **Single Sign-On (SSO)** is an authentication mechanism that allows users to access multiple applications or services with a single login. With SSO, users don't need to remember and input different login credentials for each system. Instead, they use a single set of credentials. In this project, we will implement the `OpenID Connect` authentication method.
 
 # Table of Contents
