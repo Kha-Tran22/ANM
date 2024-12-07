@@ -86,7 +86,7 @@ After success, you will move to `application page`.
 <img src="https://github.com/thaikhangvip123/Images-for-CO3069/blob/main/application.png" width="500" />
 
 ## Credits
-This project was completed by
+This project was completed by:
 - Trương Nguyễn Hoàng Anh - 2210147
 - Trần Tuấn Kha - 2211418
 - Nguyễn Trường Thái Khang - 2211458
